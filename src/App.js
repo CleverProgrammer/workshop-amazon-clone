@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import { useEffect, useState } from 'react'
 import './App.css';
 import Header from './Header'
 import Home from './Home'
@@ -9,15 +10,34 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { db } from './firebase'
 
-function App() {
+function App() { 
+
+  const [ cartItems, setCartItems ] = useState([]);
+
+  useEffect(() => {
+    db.collection('cart-items').onSnapshot((snapshot)=>{
+      let tempCartItems = []
+      snapshot.docs.map((doc)=>{
+          tempCartItems.push({
+              id: doc.id,
+              cartItem: doc.data()
+          })
+      })
+      setCartItems(tempCartItems)
+    })
+  }, [])
+
+
   return (
     <Router>
       <div className="App">
-        <Header />
+        <Header 
+          cartItems={cartItems} />
         <Switch>
           <Route path="/cart">
-            <Cart />
+            <Cart cartItems={cartItems} />
           </Route>
           <Route path="/">
             <Home />

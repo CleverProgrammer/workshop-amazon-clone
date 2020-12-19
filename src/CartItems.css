@@ -1,0 +1,11 @@
+.CartItems {
+    flex: 0.7;
+    background-color: white;
+    margin-right: 18px;
+    padding: 20px;
+
+}
+
+.CartItems h1 { 
+    margin-bottom: 8px;
+}

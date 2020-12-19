@@ -1,9 +1,13 @@
 import React from 'react'
+import CartItems from './CartItems'
+import CartTotal from './CartTotal'
+import './Cart.css'
 
-function Cart() {
+function Cart(props) {
     return (
-        <div>
-            Cart
+        <div className="Cart">
+            <CartItems cartItems={props.cartItems}   />
+            <CartTotal cartItems={props.cartItems}  />
         </div>
     )
 }

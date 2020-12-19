@@ -9,7 +9,20 @@ import {
     Link
   } from "react-router-dom";
 
-function Header() {
+function Header(props) {
+
+    const getCount = () => {
+        // init count with 0
+        // loop through all the items
+        // add quantity to count
+        // return it
+        let count = 0;
+        props.cartItems.forEach(item => {
+            count += parseInt(item.cartItem.quantity)
+        });
+        return count;
+    }
+
     return (
         <div className="Header">
             {/* Logo */}
@@ -49,7 +62,7 @@ function Header() {
                 <Link to="/cart">
                     <div className="Header-optionCart">
                         <ShoppingBasketIcon />
-                        <span className="Header-cartCount">20</span>
+                        <span className="Header-cartCount">{getCount()}</span>
                     </div>
                 </Link>
             </div>

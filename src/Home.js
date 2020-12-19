@@ -35,6 +35,7 @@ function Home() {
                         {
                             products.map((product)=>(
                                 <Product
+                                    id={product.id}
                                     key={product.id}
                                     title={product.product.title}
                                     price={product.product.price}

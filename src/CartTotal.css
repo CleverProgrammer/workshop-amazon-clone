@@ -1,0 +1,25 @@
+.CartTotal {
+    flex: 0.3;
+    background-color: white;
+    padding: 20px;
+}
+
+.CartTotal h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.CartTotal button {
+    width: 100%;
+    background-color: #f0c14b;
+    border-radius: 4px;
+    border: 2px solid #a88734;
+    font-size: 16px;
+    padding: 4px 8px 4px 8px;
+    cursor: pointer;
+}
+
+.CartTotal button:hover {
+    background-color:  #ddb347;
+}
+
