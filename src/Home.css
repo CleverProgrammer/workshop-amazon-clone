@@ -1,0 +1,14 @@
+.Home-row {
+    display: flex;
+}
+
+.Home-content {
+    margin-top: -350px;
+}
+
+.Home-banner {
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}

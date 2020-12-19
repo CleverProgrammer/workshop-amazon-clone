@@ -1,0 +1,78 @@
+.Header {
+    background-color: #0F1111;
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Header img {
+    width: 100px;
+    margin-left: 20px;
+}
+
+.Header-option {
+    display: flex;
+    flex-direction: column;
+    padding: 9px;
+}
+
+.Header-optionLineTwo {
+    font-weight: bold;
+}
+
+.Header-search {
+    flex-grow: 1;
+    display: flex;
+    height: 40px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.Header-searchIconContainer {
+    width: 45px;
+    background-color: #febd69;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Header-search input {
+    width: 100%;
+    width: 100%;
+    border: none;
+    font-size: 15px;
+}
+
+.Header-search input:focus {
+    outline: none;
+}
+
+.Header-search:focus-within {
+    box-shadow: 0 0 0 3px #F90;
+}
+
+.Header-navItems {
+    display: flex;
+    flex-direction: row;
+}
+
+.Header-optionCart {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+}
+
+.Header-cartCount {
+    font-weight: bold;
+    color: #f08804;
+    padding-left: 4px;
+}
+
+.Header a {
+    display: flex;
+    color: white;
+    text-decoration: none;
+}
